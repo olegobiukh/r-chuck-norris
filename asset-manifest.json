@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/r-chuck-norris/static/css/main.19e7627a.chunk.css",
+    "main.css": "/r-chuck-norris/static/css/main.a7705fc9.chunk.css",
     "main.js": "/r-chuck-norris/static/js/main.f2c3609e.chunk.js",
     "main.js.map": "/r-chuck-norris/static/js/main.f2c3609e.chunk.js.map",
     "runtime-main.js": "/r-chuck-norris/static/js/runtime-main.66af6f77.js",
@@ -8,9 +8,9 @@
     "static/js/2.5365f9bf.chunk.js": "/r-chuck-norris/static/js/2.5365f9bf.chunk.js",
     "static/js/2.5365f9bf.chunk.js.map": "/r-chuck-norris/static/js/2.5365f9bf.chunk.js.map",
     "index.html": "/r-chuck-norris/index.html",
-    "precache-manifest.7a4e2b615e967878a7dade92e214761c.js": "/r-chuck-norris/precache-manifest.7a4e2b615e967878a7dade92e214761c.js",
+    "precache-manifest.a8f6f043c3267d8a80936b9269416237.js": "/r-chuck-norris/precache-manifest.a8f6f043c3267d8a80936b9269416237.js",
     "service-worker.js": "/r-chuck-norris/service-worker.js",
-    "static/css/main.19e7627a.chunk.css.map": "/r-chuck-norris/static/css/main.19e7627a.chunk.css.map",
+    "static/css/main.a7705fc9.chunk.css.map": "/r-chuck-norris/static/css/main.a7705fc9.chunk.css.map",
     "static/js/2.5365f9bf.chunk.js.LICENSE.txt": "/r-chuck-norris/static/js/2.5365f9bf.chunk.js.LICENSE.txt",
     "static/media/burger-close.svg": "/r-chuck-norris/static/media/burger-close.dbd9017e.svg",
     "static/media/burger-open.svg": "/r-chuck-norris/static/media/burger-open.358f75fe.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.66af6f77.js",
     "static/js/2.5365f9bf.chunk.js",
-    "static/css/main.19e7627a.chunk.css",
+    "static/css/main.a7705fc9.chunk.css",
     "static/js/main.f2c3609e.chunk.js"
   ]
 }
