@@ -1,9 +1,5 @@
 import "./index.scss";
 
-import heartImg from "../../assets/icons/heart.svg";
-import messageImg from "../../assets/icons/message.svg";
-import linkImg from "../../assets/icons/link.svg";
-
 import React, { useState, useEffect } from "react";
 import Joke from "../../components/Joke";
 

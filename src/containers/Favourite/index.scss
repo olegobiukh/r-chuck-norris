@@ -1,7 +1,15 @@
+@import "../../assets/styles/main.scss";
+
 .favourite {
+  @include laptop {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  width: 480px;
   padding: 40px;
   background-color: #f8f8f8;
-  width: 480px;
+
   &__title {
     font-size: 20px;
     color: #ababab;

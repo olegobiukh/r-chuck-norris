@@ -1,4 +1,4 @@
-$c-default: #333;
+@import "../../assets/styles/main.scss";
 
 .form {
   margin-top: 43px;
@@ -37,7 +37,6 @@ $c-default: #333;
   }
   &__text {
     color: $c-default;
-    font-weight: bold;
   }
   &__design {
     width: 16px;
@@ -74,7 +73,7 @@ $c-default: #333;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    &:checked + .main__design {
+    &:checked + .form__design {
       border-color: $c-default;
       &::before {
         opacity: 1;
@@ -83,22 +82,33 @@ $c-default: #333;
         transform: translate(-50%, -50%) scale(0.5);
       }
     }
-    &:hover + .main__design,
-    &:focus + .main__design {
+    &:hover + .form__design,
+    &:focus + .form__design {
       border-color: $c-default;
       top: 50%;
     }
-    &:hover + .main__design:before,
-    &:focus + .main__design:before {
+    &:hover + .form__design:before,
+    &:focus + .form__design:before {
       background: $c-default;
     }
-    &:hover ~ .main__text {
+    &:hover ~ .form__text {
       color: $c-default;
     }
-    &:focus + .main__design::after,
-    &:active + .main__design::after {
+    &:focus + .form__design::after,
+    &:active + .form__design::after {
       opacity: 0.1;
       transform: scale(2.6);
+    }
+  }
+  &__search {
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid #333333;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    ::placeholder {
+      color: #ababab;
     }
   }
 }

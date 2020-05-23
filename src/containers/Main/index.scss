@@ -1,6 +1,10 @@
-$c-default: #333;
+@import "../../assets/styles/main.scss";
 
 .main {
+  @include laptop {
+    width: 100%;
+    padding: 40px 20px 140px;
+  }
   padding-top: 40px;
   padding-bottom: 140px;
   width: calc(100% - 480px);
@@ -21,108 +25,6 @@ $c-default: #333;
   &__subtitle {
     font-size: 24px;
   }
-  &__text {
-    color: $c-default;
-    font-weight: bold;
-  }
-  &__design {
-    width: 16px;
-    height: 16px;
-    border: 2px solid #ababab;
-    border-radius: 100%;
-    margin-right: 16px;
-    position: relative;
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      width: inherit;
-      height: inherit;
-      border-radius: inherit;
-      position: absolute;
-      transform: scale(0);
-      transform-origin: center center;
-    }
-  }
-  &__label {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin: 12px 0;
-    cursor: pointer;
-    position: relative;
-  }
-  &__input {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    &:checked + .main__design {
-      border-color: $c-default;
-      &::before {
-        opacity: 1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0.5);
-      }
-    }
-    &:hover + .main__design,
-    &:focus + .main__design {
-      border-color: $c-default;
-      top: 50%;
-    }
-    &:hover + .main__design:before,
-    &:focus + .main__design:before {
-      background: $c-default;
-    }
-    &:hover ~ .main__text {
-      color: $c-default;
-    }
-    &:focus + .main__design::after,
-    &:active + .main__design::after {
-      opacity: 0.1;
-      transform: scale(2.6);
-    }
-  }
-  // &__options {
-  //   margin-top: 43px;
-  // }
-  // &__tags {
-  //   margin-top: 20px;
-  // }
-  // &__tag {
-  //   border: 2px solid #f8f8f8;
-  //   border-radius: 6px;
-  //   margin-right: 10px;
-  //   padding: 6px 15px;
-  //   color: #ababab;
-  //   letter-spacing: 2px;
-  //   text-transform: uppercase;
-  //   background-color: #fff;
-  //   font-size: 12px;
-  //   cursor: pointer;
-  //   &--active {
-  //     background: #f8f8f8;
-  //     color: $c-default;
-  //   }
-  // }
-  // &__button {
-  //   background: #7291ff;
-  //   margin-top: 23px;
-  //   border-radius: 10px;
-  //   border: none;
-  //   padding: 10px 40px;
-  //   font-size: 16px;
-  //   cursor: pointer;
-  //   color: #fff;
-  //   transition: background-color 0.5s;
-  //   &:hover {
-  //     background-color: darken(#7291ff, 10%);
-  //   }
-  // }
   &__jokes {
     margin-top: 40px;
   }
