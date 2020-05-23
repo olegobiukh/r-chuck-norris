@@ -1,14 +1,21 @@
 import "./index.scss";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Main from "../../containers/Main";
 import Favourite from "../../containers/Favourite";
 
-const App = ({ createUser, updateUser, users, match }) => {
+const App = () => {
+  const [isMenuOpened, setMenuStatus] = useState(false);
+
   return (
-    <div className={`app`}>
-      <Main />
-      <Favourite />
+    <div className={`app ${isMenuOpened ? "app--overflow" : null}`}>
+      <Main isMenuOpened={isMenuOpened} setMenuStatus={setMenuStatus} />
+      <Favourite isMenuOpened={isMenuOpened} setMenuStatus={setMenuStatus} />
+      <div
+        className={`app__background ${
+          isMenuOpened ? "app__background--active" : null
+        }`}
+      ></div>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+@import "../../assets/styles/main.scss";
+
 .joke {
   position: relative;
   border-radius: 20px;
@@ -10,10 +12,17 @@
     padding: 47px 20px 20px 80px;
   }
   &--main {
+    @include mobile {
+      padding: 47px 20px 20px 80px;
+    }
     background-color: #f8f8f8;
     padding: 67px 40px 45px 100px;
   }
   &__heart {
+    @include mobile {
+      top: 20px;
+      right: 20px;
+    }
     position: absolute;
     top: 40px;
     right: 40px;
@@ -24,11 +33,14 @@
   }
   &__text {
     margin-top: 5px;
+    word-wrap:break-word;
     &--favourite {
       font-size: 14px;
+      line-height: 20px;
     }
     &--main {
       font-size: 18px;
+      line-height: 26px;
     }
   }
   &__link {
@@ -59,6 +71,10 @@
     }
   }
   &__bottom {
+    @include mobile {
+      flex-direction: column;
+      align-items: baseline;
+    }
     display: flex;
     justify-content: space-between;
     &--favourite {
@@ -66,6 +82,11 @@
     }
     &--main {
       margin-top: 23px;
+    }
+  }
+  &__category {
+    @include mobile {
+      margin-top: 10px;
     }
   }
   &__update {
