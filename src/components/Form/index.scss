@@ -1,25 +1,39 @@
 $c-default: #333;
 
-.main {
-  padding-top: 40px;
-  padding-bottom: 140px;
-  width: calc(100% - 480px);
-  &__wrapper {
-    max-width: 680px;
-    margin: auto;
+.form {
+  margin-top: 43px;
+  &__tags {
+    margin-top: 20px;
   }
-  &__logo {
-    font-size: 20px;
+  &__tag {
+    border: 2px solid #f8f8f8;
+    border-radius: 6px;
+    margin-right: 10px;
+    padding: 6px 15px;
+    color: #ababab;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    &--active {
+      background: #f8f8f8;
+      color: $c-default;
+    }
   }
-  &__heading {
-    margin-top: 78px;
-    line-height: 44px;
-  }
-  &__title {
-    font-size: 32px;
-  }
-  &__subtitle {
-    font-size: 24px;
+  &__button {
+    background: #7291ff;
+    margin-top: 23px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.5s;
+    &:hover {
+      background-color: darken(#7291ff, 10%);
+    }
   }
   &__text {
     color: $c-default;
@@ -86,44 +100,5 @@ $c-default: #333;
       opacity: 0.1;
       transform: scale(2.6);
     }
-  }
-  // &__options {
-  //   margin-top: 43px;
-  // }
-  // &__tags {
-  //   margin-top: 20px;
-  // }
-  // &__tag {
-  //   border: 2px solid #f8f8f8;
-  //   border-radius: 6px;
-  //   margin-right: 10px;
-  //   padding: 6px 15px;
-  //   color: #ababab;
-  //   letter-spacing: 2px;
-  //   text-transform: uppercase;
-  //   background-color: #fff;
-  //   font-size: 12px;
-  //   cursor: pointer;
-  //   &--active {
-  //     background: #f8f8f8;
-  //     color: $c-default;
-  //   }
-  // }
-  // &__button {
-  //   background: #7291ff;
-  //   margin-top: 23px;
-  //   border-radius: 10px;
-  //   border: none;
-  //   padding: 10px 40px;
-  //   font-size: 16px;
-  //   cursor: pointer;
-  //   color: #fff;
-  //   transition: background-color 0.5s;
-  //   &:hover {
-  //     background-color: darken(#7291ff, 10%);
-  //   }
-  // }
-  &__jokes {
-    margin-top: 40px;
   }
 }

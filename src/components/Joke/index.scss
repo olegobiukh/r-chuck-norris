@@ -1,18 +1,35 @@
 .joke {
-  position: absolute;
-  padding: 67px 40px 45px 100px;
-  background: #f8f8f8;
+  position: relative;
   border-radius: 20px;
   &:not(:first-of-type) {
     margin-top: 20px;
+  }
+  &--favourite {
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 47px 20px 20px 80px;
+  }
+  &--main {
+    background-color: #f8f8f8;
+    padding: 67px 40px 45px 100px;
   }
   &__heart {
     position: absolute;
     top: 40px;
     right: 40px;
+    cursor: pointer;
   }
   &__box {
     position: relative;
+  }
+  &__text {
+    margin-top: 5px;
+    &--favourite {
+      font-size: 14px;
+    }
+    &--main {
+      font-size: 18px;
+    }
   }
   &__link {
     margin-left: 5px;
@@ -23,10 +40,15 @@
     width: 40px;
     height: 40px;
     left: -60px;
-    background-color: #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    &--favourite {
+      background: #f8f8f8;
+    }
+    &--main {
+      background-color: #fff;
+    }
   }
   &__id {
     font-size: 10px;
@@ -39,7 +61,12 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
-    margin-top: 23px;
+    &--favourite {
+      margin-top: 20px;
+    }
+    &--main {
+      margin-top: 23px;
+    }
   }
   &__update {
     font-size: 10px;
@@ -49,6 +76,7 @@
     border-radius: 6px;
     padding: 6px 20px;
     color: #333;
+    background-color: #fff;
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;

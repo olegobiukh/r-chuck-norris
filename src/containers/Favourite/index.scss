@@ -1,0 +1,12 @@
+.favourite {
+  padding: 40px;
+  background-color: #f8f8f8;
+  width: 480px;
+  &__title {
+    font-size: 20px;
+    color: #ababab;
+  }
+  &__container {
+    margin-top: 20px;
+  }
+}
