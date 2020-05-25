@@ -1,20 +1,20 @@
 import "./index.scss";
 
-import React from "react";
+import React, { useContext } from "react";
 import Joke from "../../components/Joke";
 import uid from "uid";
 import Burger from "../../components/Burger/Burger";
+import { Context } from "../../context";
 
 const Favourite = ({ isMenuOpened, setMenuStatus }) => {
-  console.log(localStorage.getItem("favourites"));
-  const jokes = localStorage.getItem("favourites")
-    ? JSON.parse(localStorage.getItem("favourites"))
-    : [];
-  console.log(1);
+  const favouriteContext = useContext(Context);
 
-  const items = jokes.map((item) => (
-    <Joke key={uid()} isFavourite item={item} />
-  ));
+  const items =
+    favouriteContext.favourites.length > 0
+      ? favouriteContext.favourites.map((item) => (
+          <Joke key={uid()} isFavourite item={item} />
+        ))
+      : [];
 
   return (
     <section className={`favourite ${isMenuOpened && "favourite--show"}`}>

@@ -4,9 +4,12 @@ import heartEmptyImg from "../../assets/icons/heart-empty.svg";
 import messageImg from "../../assets/icons/message.svg";
 import linkImg from "../../assets/icons/link.svg";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../../context";
 
 const Joke = ({ item, isFavourite }) => {
+  const favouriteContext = useContext(Context);
+
   const [isFavouriteItem, setFavourites] = useState(false);
   function countHoursAgo() {
     const milliseconds = Math.abs(new Date(item.updated_at) - new Date());
@@ -22,7 +25,7 @@ const Joke = ({ item, isFavourite }) => {
         ? favourites.some((el) => el.id === item.id)
         : false;
     setFavourites(isFavouriteEl);
-    
+
   }, [item.id]);
 
   const addFavourite = () => {
@@ -37,9 +40,11 @@ const Joke = ({ item, isFavourite }) => {
     localStorage.setItem("favourites", JSON.stringify(newFavourites));
     console.log(newFavourites);
     setFavourites(!isFavouriteItem);
+    favouriteContext.setFauvorites(newFavourites);
   };
 
   const hours = countHoursAgo();
+
 
   return (
     <article
@@ -48,7 +53,7 @@ const Joke = ({ item, isFavourite }) => {
       <img
         src={isFavouriteItem ? heartImg : heartEmptyImg}
         alt="heart"
-        className={`joke__heart`}
+        className={`joke__heart ${isFavourite ? "joke__heart--favourite" : "joke__heart--main"}`}
         onClick={addFavourite}
       />
       <div className={`joke__box`}>
@@ -85,7 +90,9 @@ const Joke = ({ item, isFavourite }) => {
         >
           <p className={`joke__update`}>Last update: {hours} hours ago</p>
           {!isFavourite && item.categories[0] && (
-            <p className={`joke__option joke__category`}>{item.categories[0]}</p>
+            <p className={`joke__option joke__category`}>
+              {item.categories[0]}
+            </p>
           )}
         </div>
       </div>

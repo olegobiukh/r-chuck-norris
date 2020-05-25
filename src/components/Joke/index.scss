@@ -24,9 +24,15 @@
       right: 20px;
     }
     position: absolute;
-    top: 40px;
-    right: 40px;
     cursor: pointer;
+    &--favourite {
+      top: 20px;
+      right: 20px;
+    }
+    &--main {
+      top: 40px;
+      right: 40px;
+    }
   }
   &__box {
     position: relative;
