@@ -32,7 +32,6 @@ const Form = ({ setJokes }) => {
     setQuery("");
   };
 
-  // const categories = categoryList;
   const tags = categories.map((item) => (
     <button
       key={uid()}
@@ -56,7 +55,6 @@ const Form = ({ setJokes }) => {
 
       const res = await axios.get(baseUrl + url);
       const data = option === 1 || option === 2 ? [res.data] : res.data.result;
-      console.log(data);
 
       setJokes(data);
       setOptionChange(2);

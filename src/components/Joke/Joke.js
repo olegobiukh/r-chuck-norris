@@ -38,7 +38,6 @@ const Joke = ({ item, isFavourite }) => {
       : [item, ...favourites];
 
     localStorage.setItem("favourites", JSON.stringify(newFavourites));
-    console.log(newFavourites);
     setFavourites(!isFavouriteItem);
     favouriteContext.setFauvorites(newFavourites);
   };
